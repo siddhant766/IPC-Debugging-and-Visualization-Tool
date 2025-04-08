@@ -1,0 +1,61 @@
+Modules and Assigned Tasks
+Module 1: IPC Mechanisms Implementation (C++)
+Tasks:
+
+Implement pipes for process communication.
+
+Implement message queues for sending and receiving structured messages.
+
+Implement shared memory for direct memory access between processes.
+
+Ensure proper synchronization mechanisms (mutexes, semaphores) to prevent race conditions.
+
+Module 2: Debugging & Visualization Logic
+Tasks:
+
+Track data flow between processes in real-time.
+
+Identify bottlenecks (delays in message passing, blocked processes).
+
+Detect deadlocks using wait-for graphs and cycle detection algorithms.
+
+Module 3: GUI Development (HTML, Tailwind CSS)
+Tasks:
+
+Design a dashboard for real-time process monitoring.
+
+Display graphical representation of IPC mechanisms.
+
+Show alerts for detected deadlocks or bottlenecks.
+
+Provide control buttons (start, pause, reset, terminate processes).
+
+Module 4: Integration & Testing
+Tasks:
+
+Connect C++ backend with the frontend UI.
+
+Implement API communication between frontend and backend.
+
+Perform unit testing on IPC methods.
+
+Test GUI responsiveness and data visualization accuracy.
+
+Module 5: Documentation & Final Report
+Tasks:
+
+Prepare a detailed report with:
+
+Introduction
+
+Objectives
+
+Technologies used
+
+Implementation details
+
+Test results and findings
+
+Screenshots of UI and IPC mechanisms in action
+
+Write code documentation for maintainability.
