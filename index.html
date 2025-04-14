@@ -1,0 +1,86 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPC Debugging Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-theme">
+  <div class="theme-toggle-container">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+  </div>
+  <div class="container">
+    <h1>Inter-Process Communication Debugger</h1>
+    
+    <div class="controls">
+      <div class="control-group">
+        <h3>Send Message</h3>
+        <select id="ipc-method">
+          <option value="pipes">Pipes</option>
+          <option value="messageQueues">Message Queues</option>
+          <option value="sharedMemory">Shared Memory</option>
+        </select>
+        <input type="text" id="message-input" placeholder="Enter message">
+        <input type="number" id="delay-input" placeholder="Delay (ms)" value="100">
+        <button id="send-btn">Send</button>
+      </div>
+      
+      <div class="control-group">
+        <h3>Manage</h3>
+        <button id="clear-btn">Clear All</button>
+        <select id="clear-method">
+          <option value="all">All Methods</option>
+          <option value="pipes">Pipes Only</option>
+          <option value="messageQueues">Queues Only</option>
+          <option value="sharedMemory">Memory Only</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="ipc-display">
+      <div class="ipc-method" id="pipes-display">
+        <h2>Pipes</h2>
+        <div class="status" data-status="idle">Status: <span>idle</span></div>
+        <div class="messages">
+          <h3>Messages</h3>
+          <div class="message-list"></div>
+        </div>
+        <div class="issues">
+          <h3>Potential Issues</h3>
+          <div class="issue-list"></div>
+        </div>
+      </div>
+      
+      <div class="ipc-method" id="queues-display">
+        <h2>Message Queues</h2>
+        <div class="status" data-status="idle">Status: <span>idle</span></div>
+        <div class="messages">
+          <h3>Messages</h3>
+          <div class="message-list"></div>
+        </div>
+        <div class="issues">
+          <h3>Potential Issues</h3>
+          <div class="issue-list"></div>
+        </div>
+      </div>
+      
+      <div class="ipc-method" id="memory-display">
+        <h2>Shared Memory</h2>
+        <div class="status" data-status="idle">Status: <span>idle</span></div>
+        <div class="memory-data">
+          <h3>Memory Contents</h3>
+          <div class="memory-contents"></div>
+        </div>
+        <div class="issues">
+          <h3>Potential Issues</h3>
+          <div class="issue-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
